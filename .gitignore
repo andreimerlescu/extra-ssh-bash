@@ -1,0 +1,6 @@
+backups
+*.log
+.DS_Store
+.idea
+logs/*
+!logs/.keep
