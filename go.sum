@@ -1,0 +1,9 @@
+github.com/andreimerlescu/configurable v0.0.8 h1:Y7wHgGhYZxGSEQ2Zx07PmVB0b6rJI0YJoYRfxqoQbF0=
+github.com/andreimerlescu/configurable v0.0.8/go.mod h1:lIL86PTLGv2CSZq5Wo3MCc8v9jVSNG5+l6rnjkeXcSg=
+github.com/andreimerlescu/go-sema v0.0.1 h1:+PijxhpaJXDDApRGnOOln23Cddb68T9+wkJtKFMcTuc=
+github.com/andreimerlescu/go-sema v0.0.1/go.mod h1:m7krZFMBkrhm0P/4vVLoeeqQMv0m9sC4r9HfjLGxA7k=
+github.com/go-ini/ini v1.67.0 h1:z6ZrTEZqSWOTyH2FlglNbNgARyHG8oLW9gMELqKr06A=
+github.com/go-ini/ini v1.67.0/go.mod h1:ByCAeIL28uOIIG0E3PJtZPDL8WnHpFKFOtgjp+3Ies8=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
+gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=

@@ -2,12 +2,12 @@
 
 [[ -z "${INSIDE_ESB}" ]] && { echo "FATAL ERROR: This function cannot be executed on its own."; exit 1; }
 
-# Welcome! It's very good to have you in the source code =D
-banner_success "WELCOME TO ELWORK (encrypted luks workspace)!"
-
 # Arrays to store parameter / command line arguments
 declare -A params=()
 declare -A documentation=()
+declare -A actions=(
+    [tfdir]="Path to Terraform directory"
+)
 
 # Use --sudo to enable sudo to be appended before each command executed
 SUDO=""
@@ -42,3 +42,6 @@ documentation[sudo]="Flag to enable sudo before running commands"
 
 params[trace]=false
 documentation[trace]="Flag to enable stack traces in console output"
+
+params[action]=""
+documentation[action]="Action to perform"

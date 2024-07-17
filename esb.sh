@@ -19,10 +19,22 @@ declare INSIDE_ESB=true
 
 # Load dependencies
 files=("functions.sh" "header.sh" "validations.sh" "actions.sh")
+declare -A icns=(
+    ["functions.sh"]="⚀"
+    ["header.sh"]="⚁"
+    ["validations.sh"]="⚂"
+    ["actions.sh"]="⚃"
+    #[""]="⚄" # placeholder for 5
+    #[""]="⚅" # placeholder for 6
+)
 for file in "${files[@]}"; do
+    ((idx++))
     found_file=$(find ./lib -maxdepth 1 -name "$file" -print -quit)
-    { [[ -n "$found_file" ]] && source "$found_file"; } || { echo "$file not found in the current directory."; exit 1; }
+    found_file="$(realpath $found_file)"
+    { [[ -n "$found_file" ]] && source "$found_file"; printf "%s" "${icns[$file]}"; } || { echo "$found_file not found in the current directory."; exit 1; }
 done
+printf "%s\n" " Loaded application!"
+
 
 function main() {
     parse_arguments "$@" || fatal "Failed to parse arguments"
@@ -30,6 +42,9 @@ function main() {
     for p in "${!params[@]}"; do
         debug "${p} = ${params[$p]}"
     done
+
+    # Welcome! It's very good to have you in the source code =D
+    banner_success "WELCOME TO EXTRA SSH BASH (ESB)!"
 
     case "${params[action]}" in
         #pa|pass|passwd|password) action_passwd ;;
